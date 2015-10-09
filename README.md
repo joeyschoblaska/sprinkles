@@ -15,8 +15,16 @@ group :development do
 end
 ```
 
-### copy sprinkles to your project
+### put some sprinkles on your project
 ```
 cd path/to/project
 git clone --depth=1 git@github.com:joeyschoblaska/sprinkles.git && rm -rf sprinkles/.git
 ```
+
+### customize sprinkles/sprinkle.rb
+This file defines your servers, roles, and which packages you want to install for each. Available packages are in `sprinkles/package`, and you can add new ones there if you need to.
+
+## usage
+`sprinkle -s sprinkles/sprinkle.rb`
+
+For more information about using the `sprinkle` command, check out the [sprinkle project](https://github.com/sprinkle-tool/sprinkle) itself.
