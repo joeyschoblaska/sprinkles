@@ -7,7 +7,7 @@ Packages and scripts for provisioning servers using Sprinkle. Assumes Ubuntu (or
 4. `sudo apt-get update`
 
 ## Project setup
-### Add these gems
+### Add these gems to your Gemfile
 ```ruby
 group :development do
   gem "net-ssh-gateway"
@@ -15,7 +15,7 @@ group :development do
 end
 ```
 
-### Put some sprinkles on your project
+### Copy sprinkles to your project tree
 ```
 cd path/to/project
 git clone --depth=1 git@github.com:joeyschoblaska/sprinkles.git
