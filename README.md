@@ -23,7 +23,7 @@ rm -rf sprinkles/.git
 ```
 
 ### Customize sprinkles/sprinkle.rb
-This file defines your servers, roles, and which packages you want to install for each. Available packages are in `sprinkles/package`, and you can add new ones there if you need to.
+This file defines your servers, roles, and which packages you want to install for each. Packages are stored in `sprinkles/packages/`.
 
 ## Usage
 `sprinkle -s sprinkles/sprinkle.rb`
