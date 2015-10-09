@@ -2,6 +2,7 @@ Dir["./sprinkles/packages/*.rb"].each { |f| require f }
 
 policy :ruby, roles: :app do
   requires :build_essentials
+  requires :git
   requires :rvm
   requires :ruby, version: "2.2"
 end
