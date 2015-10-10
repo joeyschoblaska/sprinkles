@@ -29,3 +29,9 @@ This file defines your servers, roles, and which packages you want to install fo
 `sprinkle -s sprinkles/sprinkle.rb`
 
 For more information about using the `sprinkle` command, check out the [sprinkle project](https://github.com/sprinkle-tool/sprinkle) itself.
+
+## Todo
+* Unicorn
+* nginx
+* dotfiles
+* optional database providers
