@@ -1,4 +1,4 @@
-Dir["./sprinkles/packages/*.rb"].each { |f| require f }
+require "./bootstrap"
 
 policy :ruby, roles: :app do
   requires :build_essentials
@@ -10,7 +10,7 @@ end
 deployment do
   delivery :ssh do
     user "deploy"
-    role :app, "123.123.123.123"
+    role :app, "chessforge2"
   end
 
   source do
