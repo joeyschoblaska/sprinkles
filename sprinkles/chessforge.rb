@@ -1,15 +1,18 @@
 require "./bootstrap"
 
-policy :ruby, roles: :app do
+policy :app_stack, roles: :app do
   requires :build_essentials
   requires :git
   requires :rvm
   requires :ruby, version: "2.2"
+  requires :dotfiles
 end
 
 deployment do
   delivery :ssh do
     user "deploy"
+    forward_agent true
+
     role :app, "chessforge2"
   end
 
