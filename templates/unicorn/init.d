@@ -77,6 +77,7 @@ setup () {
   cd $APP_ROOT || exit 1
   export PID=$APP_ROOT/shared/pids/unicorn.pid
   export OLD_PID="$PID.oldbin"
+  [ -f /etc/environment ] && . /etc/environment
 
   CMD="/home/deploy/.rvm/wrappers/default/bundle exec unicorn -c config/unicorn.rb -E $APP_ENV -D"
 }
