@@ -6,6 +6,7 @@ policy :app_stack, roles: :app do
   requires :rvm
   requires :ruby, version: "2.2"
   requires :dotfiles
+  requires :unicorn
 end
 
 deployment do
