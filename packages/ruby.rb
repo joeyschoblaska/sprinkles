@@ -9,5 +9,5 @@ package :ruby do
   requires :ruby_dependencies
 
   runner "/home/deploy/.rvm/bin/rvm install #{version}"
-  runner "/home/deploy/.rvm/bin/rvm alias create default #{version}"
+  runner "/home/deploy/.rvm/bin/rvm alias create default #{version}" # https://rvm.io/deployment/init-d
 end

@@ -12,6 +12,5 @@ Packages and scripts for provisioning servers using Sprinkle. Assumes Ubuntu (or
 For more information about using the `sprinkle` command, check out the [sprinkle project](https://github.com/sprinkle-tool/sprinkle) itself.
 
 ## Todo
-* Unicorn
 * nginx
 * optional database providers

@@ -8,8 +8,8 @@
 #
 ## A sample /etc/unicorn/my_app.conf
 ##
-## RAILS_ENV=production
-## RAILS_ROOT=/var/apps/www/my_app/current
+## APP_ENV=production
+## APP_ROOT=/var/apps/www/my_app/current
 #
 # This configures a unicorn master for your app at /var/apps/www/my_app/current running in
 # production mode. It will read config/unicorn.rb for further set up.
@@ -73,12 +73,12 @@ cmd () {
 }
 
 setup () {
-  echo -n "$RAILS_ROOT: "
-  cd $RAILS_ROOT || exit 1
-  export PID=$RAILS_ROOT/tmp/pids/unicorn.pid
+  echo -n "$APP_ROOT: "
+  cd $APP_ROOT || exit 1
+  export PID=$APP_ROOT/tmp/pids/unicorn.pid
   export OLD_PID="$PID.oldbin"
 
-  CMD="/usr/local/rvm/gems/`rvm current`/bin/unicorn -c config/unicorn.rb -E $RAILS_ENV -D"
+  CMD="/home/deploy/.rvm/wrappers/default/bundle exec unicorn -c config/unicorn.rb -E $APP_ENV -D"
 }
 
 start_stop () {

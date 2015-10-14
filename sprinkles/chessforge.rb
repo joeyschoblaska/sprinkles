@@ -6,7 +6,7 @@ policy :app_stack, roles: :app do
   requires :rvm
   requires :ruby, version: "2.2"
   requires :dotfiles
-  requires :unicorn
+  requires :unicorn, app_name: "chessforge-api"
 end
 
 deployment do
