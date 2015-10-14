@@ -14,5 +14,4 @@ For more information about using the `sprinkle` command, check out the [sprinkle
 ## Todo
 * Unicorn
 * nginx
-* dotfiles
 * optional database providers
