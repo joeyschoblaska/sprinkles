@@ -9,7 +9,7 @@ Packages and scripts for provisioning servers using Sprinkle. Assumes Ubuntu (or
 ## Usage
 `sprinkle -s sprinkles/sprinkle.rb`
 
-For more information about using the `sprinkle` command, check out the [sprinkle project](https://github.com/sprinkle-tool/sprinkle) itself.
+Check out the [sprinkle project](https://github.com/sprinkle-tool/sprinkle) for more information on commands and packages.
 
 ## Todo
 * nginx
