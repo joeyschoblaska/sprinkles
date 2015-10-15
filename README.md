@@ -14,3 +14,5 @@ Check out the [sprinkle project](https://github.com/sprinkle-tool/sprinkle) for 
 ## Todo
 * nginx
 * optional database providers
+* unicorn/nginx autostart on boot
+* memcached
