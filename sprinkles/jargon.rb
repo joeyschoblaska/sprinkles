@@ -10,10 +10,11 @@ policy :app_stack, roles: :app do
   requires :jargon_app_deps
   requires :git
   requires :rvm
-  requires :ruby, version: "2.2"
+  requires :ruby, version: "2.2.3"
   requires :capistrano, app_name: "jargon"
   requires :postgres
   requires :postgres_createdb, db_name: "jargon_production"
+  requires :puma, app_name: "jargon"
 end
 
 deployment do
