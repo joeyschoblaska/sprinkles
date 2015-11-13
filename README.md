@@ -7,12 +7,11 @@ Packages and scripts for provisioning servers using Sprinkle. Assumes Ubuntu (or
 4. `sudo apt-get update`
 
 ## Usage
-`sprinkle -s sprinkles/sprinkle.rb`
+`sprinkle -s sprinkles/appname.rb`
 
 Check out the [sprinkle project](https://github.com/sprinkle-tool/sprinkle) for more information on commands and packages.
 
 ## Todo
 * nginx
-* optional database providers
 * unicorn/nginx autostart on boot
 * memcached
