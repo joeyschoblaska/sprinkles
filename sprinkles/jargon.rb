@@ -11,6 +11,7 @@ policy :app_stack, roles: :app do
   requires :git
   requires :rvm
   requires :ruby, version: "2.2"
+  requires :capistrano, app_name: "jargon"
   requires :postgres
   requires :postgres_createdb, db_name: "jargon_production"
 end

@@ -6,5 +6,4 @@ package :unicorn do
   # init.d file
   file "/etc/init.d/unicorn", content: render("init.d"), sudo: true
   runner "chmod +x /etc/init.d/unicorn", sudo: true
-  runner "mkdir -p /home/deploy/#{@app_name}/shared/pids"
 end
