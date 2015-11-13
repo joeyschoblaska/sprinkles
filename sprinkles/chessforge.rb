@@ -11,7 +11,7 @@ policy :app_stack, roles: :app do
   requires :chessforge_app_deps
   requires :git
   requires :rvm
-  requires :ruby, version: "2.2"
+  requires :ruby, ruby_version: "2.2"
   requires :dotfiles
   requires :capistrano, app_name: "chessforge-api"
   requires :unicorn, app_name: "chessforge-api"

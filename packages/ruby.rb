@@ -5,9 +5,8 @@ end
 
 package :ruby do
   description "Ruby"
-  version "2.2"
   requires :ruby_dependencies
 
-  runner "/home/deploy/.rvm/bin/rvm install #{version}"
-  runner "/home/deploy/.rvm/bin/rvm alias create default #{version}" # https://rvm.io/deployment/init-d
+  runner "/home/deploy/.rvm/bin/rvm install #{opts[:ruby_version]}"
+  runner "/home/deploy/.rvm/bin/rvm alias create default #{opts[:ruby_version]}" # https://rvm.io/deployment/init-d
 end
