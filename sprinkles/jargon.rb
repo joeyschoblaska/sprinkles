@@ -1,7 +1,6 @@
 require "./bootstrap"
 
 package :jargon_app_deps do
-  apt %w(libpq-dev), sudo: true
   runner "mkdir -p /home/deploy/jargon/shared/config"
   runner "touch /home/deploy/jargon/shared/config/secrets.yml"
 end
@@ -13,6 +12,7 @@ policy :app_stack, roles: :app do
   requires :rvm
   requires :ruby, version: "2.2"
   requires :unicorn, app_name: "jargon"
+  requires :postgres
 end
 
 deployment do
