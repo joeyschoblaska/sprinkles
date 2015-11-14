@@ -17,6 +17,7 @@ policy :app_stack, roles: :app do
   requires :postgres_createdb, db_name: "jargon_production"
   requires :puma, app_name: "jargon"
   requires :nginx, app_name: "jargon", server_name: "vps.jargon.io jargon.io"
+  requires :sidekiq, app_name: "jargon", threads: 5
 end
 
 deployment do
