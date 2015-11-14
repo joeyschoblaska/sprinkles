@@ -7,6 +7,7 @@ end
 
 policy :app_stack, roles: :app do
   requires :build_essentials
+  requires :authorized_keys, keys: %w(joey dave stephen)
   requires :jargon_app_deps
   requires :git
   requires :rvm
