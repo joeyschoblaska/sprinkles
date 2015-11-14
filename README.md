@@ -9,8 +9,3 @@ Packages and scripts for provisioning servers using Sprinkle. Assumes Ubuntu (or
 `sprinkle -s sprinkles/appname.rb`
 
 Check out the [sprinkle project](https://github.com/sprinkle-tool/sprinkle) for more information on commands and packages.
-
-## Todo
-* nginx
-* unicorn/nginx autostart on boot
-* memcached
