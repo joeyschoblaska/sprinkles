@@ -17,6 +17,7 @@ policy :api_stack, roles: :api do
   requires :rvm
   requires :ruby, ruby_version: "2.2"
   requires :dotfiles
+  requires :memcached
   requires :capistrano, app_name: "chessforge-api"
   requires :postgres
   requires :postgres_createdb, db_name: "chessforge"
