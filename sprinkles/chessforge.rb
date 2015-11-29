@@ -14,14 +14,17 @@ policy :app_stack, roles: :app do
   requires :ruby, ruby_version: "2.2"
   requires :dotfiles
   requires :capistrano, app_name: "chessforge-api"
-  requires :unicorn, app_name: "chessforge-api"
+  requires :postgres
+  requires :postgres_createdb, db_name: "chessforge"
+  requires :puma, app_name: "chessforge-api"
+  requires :nginx, app_name: "chessforge-api", server_name: "api.chessforge.com"
 end
 
 deployment do
   delivery :ssh do
     user "deploy"
     forward_agent true
-    role :app, "chessforge3"
+    role :app, "chessforge"
   end
 
   source do
