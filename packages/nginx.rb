@@ -10,7 +10,7 @@ package :nginx do
 
   apt %w(nginx), sudo: true
   file conf_path, content: render(@template_name), sudo: true
-  runner "[ -f #{link_path} ] || ln -s #{conf_path} #{link_path}", sudo: true
+  runner "sudo [ -f #{link_path} ] || sudo ln -s #{conf_path} #{link_path}"
 
   verify do
     has_executable "nginx"
