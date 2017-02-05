@@ -6,6 +6,6 @@ Packages and scripts for provisioning servers using Sprinkle. Assumes Ubuntu (or
 3. Add `deploy` to `/etc/sudoers`, allow sudo without password: `deploy ALL=(ALL:ALL) NOPASSWD:ALL`
 
 ## Usage
-`sprinkle -s sprinkles/appname.rb`
+`bundle exec sprinkle -s sprinkles/appname.rb`
 
 Check out the [sprinkle project](https://github.com/sprinkle-tool/sprinkle) for more information on commands and packages.
