@@ -13,7 +13,7 @@ deployment do
   delivery :ssh do
     user "joey"
     forward_agent true
-    role :app, "devboxname"
+    role :devbox, "devboxname"
   end
 
   source do
