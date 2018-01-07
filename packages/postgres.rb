@@ -1,6 +1,8 @@
 package :postgres, provides: :database do
-  description "PostgreSQL client, server and deploy user"
-  requires :postgres_core, :postgres_user
+  description "PostgreSQL client, server and databse users"
+  requires :postgres_core
+  requires :postgres_user, username: "deploy"
+  requires :postgres_user, username: "root"
 end
 
 package :postgres_core do
@@ -15,10 +17,10 @@ package :postgres_core do
 end
 
 package :postgres_user do
-  runner "sudo -u postgres createuser --superuser deploy && createdb deploy"
+  runner "sudo -u postgres createuser --superuser #{opts[:username]} && createdb #{opts[:username]}"
 
   verify do
-    @commands << "echo 'SELECT ROLNAME FROM PG_ROLES' | sudo -u postgres psql | grep deploy"
+    @commands << "echo 'SELECT ROLNAME FROM PG_ROLES' | sudo -u postgres psql | grep #{opts[:username]}"
   end
 end
 
