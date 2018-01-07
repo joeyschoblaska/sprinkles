@@ -1,10 +1,10 @@
 package :sidekiq do
-  description "Sidekiq init script"
+  description "Sidekiq SystemD unit file"
   requires :redis
   template_search_path "templates/sidekiq"
   @app_name = opts[:app_name]
-  @threads = opts[:threads] || 25
 
-  file "/etc/init/sidekiq.conf", content: render("sidekiq.conf"), sudo: true
-  file "/etc/init/sidekiq-workers.conf", content: render("sidekiq-workers.conf"), sudo: true
+  file "/lib/systemd/system/sidekiq.service", content: render("sidekiq.service"), sudo: true
+
+  runner "sudo systemctl enable sidekiq"
 end
