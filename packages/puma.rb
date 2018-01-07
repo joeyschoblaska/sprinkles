@@ -1,9 +1,9 @@
 package :puma do
-  description "Puma config files and init script"
+  description "Puma SystemD unit file"
   template_search_path "templates/puma"
   @app_name = opts[:app_name]
 
-  file "/etc/init/puma.conf",         content: render("puma.conf"), sudo: true
-  file "/etc/init/puma-manager.conf", content: render("puma-manager.conf"), sudo: true
-  file "/etc/pumas.conf",             content: render("pumas.conf"), sudo: true
+  file "/lib/systemd/system/puma.service", content: render("puma.service"), sudo: true
+
+  runner "sudo systemctl enable puma"
 end
