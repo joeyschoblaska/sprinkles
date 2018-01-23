@@ -30,7 +30,7 @@ WorkingDirectory=/home/deploy/<%= @app_name %>/current
 # If you use the system's ruby:
 # ExecStart=/usr/local/bin/bundle exec sidekiq -e production
 # If you use RVM:
-ExecStart=/home/deploy/.rvm/wrappers/default/bundle exec sidekiq -e production
+ExecStart=/home/deploy/.rvm/wrappers/default/bundle exec sidekiq -e production -C config/sidekiq.yml
 User=deploy
 Group=deploy
 UMask=0002
